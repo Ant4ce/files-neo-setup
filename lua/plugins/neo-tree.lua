@@ -8,6 +8,8 @@ return {
   },
   lazy = false,
   config = function()
-    vim.keymap.set('n', '<C-i>', ':Neotree filesystem reveal left toggle=true reveal=true<CR>', {})
+    vim.keymap.set('n', '<C-i>', ':Neotree filesystem reveal left reveal=true<CR>', {})
+    vim.keymap.set('n', '<C-o>', ':Neotree toggle=true', {})
+    vim.keymap.set('n', '<C-p>', ':Neotree float git_status git_base=main', {})
   end
 }
