@@ -47,7 +47,9 @@ return {
     -- when the Rust fuzzy matcher is not available, by using `implementation = "prefer_rust"`
     --
     -- See the fuzzy documentation for more information
-    fuzzy = { implementation = "prefer_rust_with_warning" }
+    -- ME NOTE: using lua here instead of rust as blink requires nightly rust build and this is not easily available on 
+    -- msys2 with Windows. For Linux can be changed back to rust.
+    fuzzy = { implementation = "lua" }
   },
   opts_extend = { "sources.default" }
 }
